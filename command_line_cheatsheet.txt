@@ -1,0 +1,27 @@
+SAUCE LABS : temp_SL    signlanguage
+
+
+rspec -r ./config.rb
+... run all tests in the spec folder, using 'config.rb'
+
+set browser = '[browser]'
+... on windows to set browser. Then run tests in separate command
+
+parallel_rspec --test-options '-r ./config_cloud.rb'
+... run in parallel on Sauce Labs
+
+rake -T
+... list Rake tasks
+
+set browser=chrome
+... set browser environment variable on Windows (before running Rake task)
+
+echo %[env_variable_name]%  eg. echo %browser%
+... check setting of an environment variable
+
+rake cloud:firefox['55', 'Windows 8.1']
+... what it looks like
+
+tag=[tag_name] rake local:chrome
+... run only the tagged tests.  (Probably needs set tag=[tag_name] separately in windows.)
+

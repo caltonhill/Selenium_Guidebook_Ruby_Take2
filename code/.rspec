@@ -1,0 +1,4 @@
+#<% if ENV['ci'] != 'cheese' %>
+--format RspecJunitFormatter
+--out results/result<%= ENV['TEST_ENV_NUMBER'] %>.xml
+#<% end %>
